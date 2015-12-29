@@ -1,6 +1,6 @@
-f0c2177381ffc97c3854d1fe9df57565 *DESCRIPTION
+dac350ed2cf610b7248efc34e17d5256 *DESCRIPTION
 05221256894453c13eadfc67d070ede4 *NAMESPACE
-d484eb09392a26479c06651219f45c1c *R/dc3net.R
+940d3df91f7897f165d57ec85176b7f2 *R/dc3net.R
 a7be3b7780ffffabe876562c7b196e3c *R/dc3netcom.R
 586ffddd23398c3dd66016792172b5b4 *R/dc3netdif.R
 a0a51445c3937a211def3cb2d6d59ad3 *R/maxofMIM.R
@@ -8,11 +8,15 @@ a4a74f446ec92c8899c991eb8b00bbe6 *R/orderList.R
 793928b15bf04dc801d05112edc92c3c *R/probSameFilt.R
 56b43d37372c6a859cf22068cdb9fb42 *R/rankList.R
 e44641ecd875852e466aac9791ba434f *R/uniqNet.R
+245119e3a72a608e06eb8761ae58e135 *data/datalist
+03ebfab64d3d2e6e7746743d8a820a7c *data/geneNames.csv.gz
 e00637723997594dc518c544e5b956b9 *data/geneNames.rda
+d3fc8bb191c96566cae9985528411bdb *data/normalData.csv.gz
 2ef2e7651e4101e847abdb1fae45455e *data/normalData.rda
+6aed503a1809555ac915252665e7b3e5 *data/tumorData.csv.gz
 8cb13d5ff3eb3771be500b60c67c44b3 *data/tumorData.rda
-83944f1e30db36708d767770d1524d46 *inst/doc/dc3net-manual.pdf
-0e4fa38a2dd4f11938da21987adaf0aa *man/dc3net.Rd
+1222d3b48edca3173d535dc7d02fc7bd *inst/doc/dc3net-manual.pdf
+974d7a89e643fa1105a876395d4ba000 *man/dc3net.Rd
 eedde7586176b0d313fafb521a4421ce *man/dc3netcom.Rd
 ec432f7b0180550c3852654ee0c783d6 *man/dc3netdif.Rd
 bd3f19bcfaf55b0091390cf40817e252 *man/geneNames.Rd

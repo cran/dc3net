@@ -10,7 +10,7 @@
 ## http://www.gnu.org/licenses/gpl.html
 
 
-dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff", methodValue=0, itNum=1, rankDif=0, percentDif=0.6, rankdCom=0, percentCom=0.85, probFiltered=FALSE, visualization=1){
+dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff", methodValue=0, itNum=1, rankDif=100, percentDif=0.6, rankdCom=10, percentCom=0.85, probFiltered=FALSE, visualization=1){
   
   dataMatrix <- FALSE
   
@@ -34,14 +34,6 @@ dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff",
     return(cat("DC3NET: Required parameter \"probes\" is missing. Please enter a probe vector."))
   }
   
-  if (rankDif==0) {
-    rankDif <- floor(nrow(dataT)*0.02)*10
-  }
-  
-  if (rankdCom==0) {
-    rankdCom <- floor(nrow(dataT)*0.02)
-  }
-  
   cat("DC3NET: Method:", method, "| Method Value:",  methodValue, "| Iteration:", itNum, "| RankDif:", rankDif, "| PercentDif:",  percentDif, "| RankdCom:", rankdCom, "| PercentCom:", percentCom, "\n")
   
   
@@ -57,6 +49,7 @@ dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff",
       justp <- sigtestp(dataT, methodValue, itNum)
       dataT <- justp$mim
       Ic <- justp$I0
+      mimT <- dataT
       
     } else if (method=="holm" || method=="hochberg" || method=="hommel" || method=="bonferroni" || method=="BH" || method=="BY") {  
         
@@ -86,6 +79,7 @@ dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff",
       
       justp <- sigtestp(dataC, methodValue, itNum)
       dataC <- justp$mim
+      mimC <- dataC
       
     } else if (method=="holm" || method=="hochberg" || method=="hommel" || method=="bonferroni" || method=="BH" || method=="BY") {  
       
@@ -116,6 +110,7 @@ dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff",
   } else if (method=="rank") {
 
     TopSigProbs <- methodValue
+    Ic <- methodValue
     
   } else if (method=="justp" || method=="holm" || method=="hochberg" || method=="hommel" || method=="bonferroni" || method=="BH" || method=="BY") {
 
@@ -140,6 +135,7 @@ dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff",
 
   # Order the list of interactions regarding MI values.
   maxTranked <- orderList(maxT)  
+  ss <- which.min(abs(maxTranked[,1]))
   
   cat("DC3NET: Ic:", Ic, "\n")
   if (method!="rank") {
@@ -233,8 +229,6 @@ dc3net <- function(dataT=c(), dataC=c(), probes=c(), genes=c(), method="cutoff",
   res <- new.env()  
   assign("DifNet", DifNet, envir=res)
   assign("CommonNet", CommonNet, envir=res)
-  assign("mimT", mimT, envir=res)
-  assign("mimC", mimC, envir=res)
   
   res
   
