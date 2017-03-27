@@ -25,6 +25,7 @@ The use of \code{probSameFilt} is very important when working on probe level. If
   \code{probSameFilt} returns mutual information matrix that the interaction scores between probes of the same gene is updated to 0.
 }
 \references{
+Altay, G. et. al. "Genome-wide differential gene network analysis software and an application in LnCap prostate cancer", bioRxiv, 2017. 
 Altay, G., Asim, M., Markowetz, F., Neal, D.E. (2011) Differential C3NET reveals disease netwokrs of direct physical interactions. BMC Bioinformatics. 12: 296.
 }
 \author{

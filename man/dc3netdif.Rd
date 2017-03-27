@@ -24,6 +24,7 @@ dc3netdif(netTemp, vals, rankdif, percent)
   \code{dc3netdif} returns differential network data matrix. The data matrix includes differential network list with gene names, mim indexes, probe names, control indexes, control mutual information rates and control ranks.
 }
 \references{
+Altay, G. et. al. "Genome-wide differential gene network analysis software and an application in LnCap prostate cancer", bioRxiv, 2017. 
 Altay, G., Asim, M., Markowetz, F., Neal, D.E. (2011) Differential C3NET reveals disease netwokrs of direct physical interactions. BMC Bioinformatics. 12: 296.
 }
 \author{

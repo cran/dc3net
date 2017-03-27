@@ -70,6 +70,7 @@ networks$DifNet
 
 }
 \references{
+Altay, G. et. al. "Genome-wide differential gene network analysis software and an application in LnCap prostate cancer", bioRxiv, 2017.
 Altay, G., Asim, M., Markowetz, F., Neal, D.E. (2011) Differential C3NET reveals disease netwokrs of direct physical interactions. BMC Bioinformatics. 12: 296.
 Altay,G., Altay,N., Neal,D. (2013) Global assessment of network inference algorithms based on available literature of gene/protein interactions. Turkish Journal of Biology. 37:547-555.
 Castro MA, Wang X, Fletcher MN, Meyer KB and Markowetz F (2012). RedeR: R/Bioconductor package for representing modular structures, nested networks and multiple levels of hierarchical associations. Genome Biology, 13(4), pp. R29.

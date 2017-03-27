@@ -23,6 +23,7 @@ orderList(mylist, colindx=1, decreasing=TRUE)
   \code{orderList} returns a sorted data matrix that rows are probe/gene names and columns are mutual information values, row numbers of each gene and row numbers of partner gene with highest mutual information value, respectively.
 }
 \references{
+ Altay, G. et. al. "Genome-wide differential gene network analysis software and an application  in LnCap prostate cancer", bioRxiv, 2017. 
   Altay, G., Asim, M., Markowetz, F., Neal, D.E. (2011) Differential C3NET reveals disease netwokrs of direct physical interactions. BMC Bioinformatics. 12: 296.
 }
 \author{
